@@ -18,5 +18,5 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/coindesk
       - SPRING_DATASOURCE_USERNAME=testtest
       - SPRING_DATASOURCE_PASSWORD=pgpass
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=validate
 
