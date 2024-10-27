@@ -1,0 +1,8 @@
+http_server_requests_seconds_count - счетчики по всем эндпоинтам
+http_server_requests_seconds_max{uri="/rates/hour"} - максимальное время ответа по конкретныму эндпоинту
+http_server_requests_seconds_max{uri=~"/rates/hour|/rates"} - максимальное время ответа по конкретным эндпоинтам
+
+rate(http_server_requests_seconds_count[1m]) - время ответа на зппросы за последнюю минуту
+increase(http_server_requests_seconds_count[1m]) - количество запросов за последнюю минуту
+
+
