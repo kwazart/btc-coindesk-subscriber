@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:13.3
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: testtest
+      POSTGRES_PASSWORD: pgpass
+      POSTGRES_DB: coindesk
+
+  scheduler:
+    image: btc-coindesk-subscriber:latest
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/coindesk
+      - SPRING_DATASOURCE_USERNAME=testtest
+      - SPRING_DATASOURCE_PASSWORD=pgpass
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+

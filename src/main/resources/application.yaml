@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: btc-coindesk-subscriber
+  datasource:
+    url: jdbc:postgresql://localhost:5432/coindesk
+    username: testtest
+    password: pgpass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+coindesk:
+  url: https://api.coindesk.com/v1/bpi/currentprice.json
