@@ -1,1 +1,1 @@
-GET http://localhost:8091/rates
+GET http://localhost:8080/rates
